@@ -1,0 +1,4 @@
+# zh-en: Chinese + English. zh: Simplified Chinese. en: English.
+# Other languages use a BCP 47 tag, for example de, zh-Hant, or pt-BR.
+# An explicit language in the current request takes precedence.
+language: zh-en

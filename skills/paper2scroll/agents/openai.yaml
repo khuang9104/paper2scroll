@@ -1,0 +1,4 @@
+interface:
+  display_name: Paper2Scroll · 论文一图流
+  short_description: Turn research papers into source-backed infographics
+  default_prompt: Use $paper2scroll to explain the attached papers and cite the original evidence.

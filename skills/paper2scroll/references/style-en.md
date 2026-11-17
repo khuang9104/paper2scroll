@@ -1,0 +1,9 @@
+# English editorial guide
+
+- Use English throughout reader-facing titles, captions, legends, and labels when English is requested. Match the requested English variant. Retain the source spelling of paper, benchmark, model, and software names.
+- Prefer the paper's terminology and check its definition in the methods, captions, or cited primary sources. Use a short explanation where the audience needs one. Keep the source term if its meaning cannot be captured precisely by a familiar equivalent. Do not invent a term or guess at an ambiguous meaning.
+- Use the full term or established project name by default. Introduce a verified short form in parentheses only when it recurs and helps the reader. Explain what a benchmark or system does at first mention. Use the same terms in prose and figure labels.
+- Write concrete headings and put the observation up front. For example, use “With color images alone, Opus 5.5 succeeded less often and needed more model calls.” Put the baseline, values, and source beside the chart. Call the measure “model calls” unless the paper actually reports cost.
+- Use short sentences with clear subjects. Use bullets for parallel conditions or failure types, and a numbered sequence for steps. Keep familiar technical terms where they carry meaning and explain them next to the example.
+- For Method / Approach, write idiomatic English from the evidence. Use a subject and an active verb to show what the author did with which material. For example, “The author interprets constitutional debates and uses historical cases to trace how political membership changed.” Use a named research method when the article supports that label. Check that the English and Chinese describe the same approach, material, and scope.
+- Preserve units, sample sizes, and qualifiers. A change from 80% to 85% is an increase of 5 percentage points. Adapt the layout to English line lengths and reread all chart labels and captions at the intended viewing size.
