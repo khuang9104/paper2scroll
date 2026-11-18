@@ -24,36 +24,27 @@ Paper2Scroll turns research PDFs into vertical infographics that explain the arg
 
 ## Install
 
-Paper2Scroll is an [Agent Skill](https://agentskills.io/specification). It uses your agent’s document-reading and image-rendering tools. The steps below install it in one Codex project. Run them from that project’s root in a directory with a writable parent.
-
-```bash
-git clone https://github.com/khuang9104/paper2scroll.git ../paper2scroll-source
-mkdir -p .agents/skills
-cp -R ../paper2scroll-source/skills/paper2scroll .agents/skills/
-```
-
-<details>
-<summary>Windows PowerShell</summary>
-
-```powershell
-git clone https://github.com/khuang9104/paper2scroll.git ../paper2scroll-source
-New-Item -ItemType Directory -Force -Path .agents/skills | Out-Null
-Copy-Item -LiteralPath ../paper2scroll-source/skills/paper2scroll -Destination .agents/skills -Recurse
-```
-
-</details>
-
-Open a new session in the project, attach a paper, and ask:
+Ask Codex or Claude Code to install it:
 
 ```text
-Use $paper2scroll to explain this paper. Show the key comparison and cite the original table.
+Install the paper2scroll skill from https://github.com/khuang9104/paper2scroll/tree/main/skills/paper2scroll for this agent.
 ```
 
-For another Agent Skills-compatible host, copy the entire [skill folder](skills/paper2scroll) into that host’s skill directory. PNG output requires a renderer available to the agent.
+Or install from your project’s terminal with the [Skills CLI](https://github.com/vercel-labs/skills), using Node.js 22.20 or later:
+
+```bash
+npx skills add khuang9104/paper2scroll --skill paper2scroll
+```
+
+Add `-a codex` or `-a claude-code` to select an agent, and `-g` for installation across projects.
+
+Attach a paper and ask “Use Paper2Scroll to explain this paper in English.” Explicit invocation is `$paper2scroll` in Codex or `/paper2scroll` in Claude Code. If the skill hasn’t appeared yet, start a new session.
+
+Paper2Scroll uses your agent’s document-reading and image-rendering tools. PNG output requires a renderer available to the agent.
 
 ## Choose an output language
 
-Edit `.agents/skills/paper2scroll/config.yaml` in your project. [The bundled default](skills/paper2scroll/config.yaml) is `zh-en`.
+Edit `config.yaml` in the installed skill folder, or ask your agent to change it. [The bundled default](skills/paper2scroll/config.yaml) is `zh-en`.
 
 ```yaml
 language: de
@@ -63,4 +54,4 @@ Use `zh` for Simplified Chinese, `en` for English, `zh-en` for Chinese and Engli
 
 ## License
 
-[MIT](LICENSE) for this project and its original example graphics. The source papers are linked for reference.
+[MIT](LICENSE) applies to project materials to the extent the contributors hold rights. The examples explain cited findings in our own words and use newly drawn diagrams and charts. Papers and other third-party materials retain their original rights and licenses. See the [example sources and reuse note](examples/robot-policies/evidence.md).

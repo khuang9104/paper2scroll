@@ -6,6 +6,8 @@
 
 图中示意与比较图均为原创绘制。数字取自下表所列原文。<br>All diagrams and comparison graphics were drawn for this example. The numbers come from the original sources below.
 
+两篇所选版本均采用 arXiv 永久非独占分发许可。公开分享长图时，原文图片、截图、表格版式和大段文字的复用应核对原许可或其他适用的法律依据。论文权利由原权利人保留。[arXiv 许可与复用说明](https://info.arxiv.org/help/license/reuse.html)<br>Both selected versions use the arXiv perpetual non-exclusive distribution license. Public reuse of paper figures, screenshots, table layouts, or substantial text requires checking the source license or another applicable legal basis. Rights in the papers remain with their rights holders. [arXiv licensing and reuse](https://info.arxiv.org/help/license/reuse.html)
+
 ## Code as Policies: Language Model Programs for Embodied Control
 
 | 图中论点 / Claim in the map | 原文定位 / Source | 证据边界 / Scope |

@@ -24,36 +24,27 @@
 
 ## 安装
 
-Paper2Scroll 是一个 [Agent Skill](https://agentskills.io/specification)，使用宿主提供的论文读取和图像渲染能力。以下命令以 Codex 项目为例，在项目根目录运行，确保上级目录可写。
-
-```bash
-git clone https://github.com/khuang9104/paper2scroll.git ../paper2scroll-source
-mkdir -p .agents/skills
-cp -R ../paper2scroll-source/skills/paper2scroll .agents/skills/
-```
-
-<details>
-<summary>Windows PowerShell</summary>
-
-```powershell
-git clone https://github.com/khuang9104/paper2scroll.git ../paper2scroll-source
-New-Item -ItemType Directory -Force -Path .agents/skills | Out-Null
-Copy-Item -LiteralPath ../paper2scroll-source/skills/paper2scroll -Destination .agents/skills -Recurse
-```
-
-</details>
-
-在项目里新开会话，附上论文，输入：
+直接把这句话发给 Codex 或 Claude Code：
 
 ```text
-用 $paper2scroll 帮我读这篇论文。画出方法和关键对照，并标出原文表号。
+请从 https://github.com/khuang9104/paper2scroll/tree/main/skills/paper2scroll 安装 paper2scroll 技能，供当前 Agent 使用。
 ```
 
-使用其他兼容 Agent Skills 的宿主时，将整个 [Skill 文件夹](skills/paper2scroll) 复制到该宿主的技能目录。导出 PNG 需要宿主有可用的渲染工具。
+也可以在项目终端用 [Skills CLI](https://github.com/vercel-labs/skills) 安装，需要 Node.js 22.20 或更新版本：
+
+```bash
+npx skills add khuang9104/paper2scroll --skill paper2scroll
+```
+
+加 `-a codex` 或 `-a claude-code` 指定宿主，加 `-g` 安装为跨项目可用。
+
+附上论文后，输入「用 Paper2Scroll 帮我读这篇论文，用中文输出」。Codex 里也可用 `$paper2scroll`，Claude Code 里可用 `/paper2scroll` 显式调用。如果安装后还未显示技能，新开一次会话即可。
+
+Paper2Scroll 使用宿主提供的论文读取和图像渲染能力，导出 PNG 需要有可用的渲染工具。
 
 ## 设置输出语言
 
-编辑项目里的 `.agents/skills/paper2scroll/config.yaml`。[初始配置](skills/paper2scroll/config.yaml)是 `zh-en`。
+编辑已安装技能目录里的 `config.yaml`，也可以直接让 Agent 帮你修改。[初始配置](skills/paper2scroll/config.yaml)是 `zh-en`。
 
 ```yaml
 language: de
@@ -63,4 +54,4 @@ language: de
 
 ## 许可
 
-[MIT](LICENSE) 适用于本项目和原创样例图。两篇论文通过原文链接查阅。
+[MIT](LICENSE) 适用于贡献者有权授权的项目内容。样例采用自行撰写的解读文字和重新绘制的示意图、数据图。论文及其他第三方材料保留各自的权利和许可，详见[样例来源与复用说明](examples/robot-policies/evidence.md)。
